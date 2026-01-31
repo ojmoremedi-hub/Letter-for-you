@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter for You ❤️</title>
+    <style>
+        
+        @font-face {
+            font-family: 'MyCustomFont'; 
+            src: url('BUDR.ttf');         }
+
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fce8f0; 
+            font-family: 'Georgia', serif;
+            margin: 0;
+            overflow: hidden;
+            transition: background-color 0.5s;
+        }
+
+        
+        #letter-stage {
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: transform 0.8s ease-in-out;
+            z-index: 10;
+        }
+
+        .envelope {
+            width: 300px;
+            height: 200px;
+            background-color: #e0b0c0;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center; align-items: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        #note-paper {
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            min-height: 300px;
+            background-color: #fffaf0;
+            border: 1px solid #ccc;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            display: none;
+            animation: fadeIn 1s forwards;
+            z-index: 10;
+        }
+
+        #next-stage-btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            font-size: 1rem;
+            transition: transform 0.2s;
+            z-index: 11;
+        }
+        
+        /* STAGE 3: PROPOSAL */
+        #proposal-stage {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #proposal-stage h1 {
+            font-family: 'MyCustomFont', sans-serif;
+            font-size: 3rem;
+            color: #ff4d6d;
+        }
+
+        .gif-container img {
+            max-width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #808080; color: white; position: absolute; }
+
+        
+        #success-content {
+            display: none;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #success-content h1 {
+            font-family: 'MyCustomFont', sans-serif;
+            font-size: 2.5rem;
+            color: #ff4d6d;
+            margin-bottom: 10px;
+        }
+
+        .polaroid-frame {
+            background-color: white;
+            width: 300px;
+            padding: 15px 15px 60px 15px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+            transform: rotate(-3deg);
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .polaroid-frame video { width: 100%; display: block; }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 24px;
+            color: #333;
+        }
+
+        
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 20px;
+            color: #ff4d6d;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(105vh) rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="background music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="letter-stage">
+        <div class="envelope">Please Open Me 💌</div>
+        <p style="color: #666; font-style: italic;">(Click The Letter To Open)</p>
+    </div>
+
+    <div id="note-paper">
+I remember when missing you felt like starvation, when I would lie awake at night reaching for your voice in the dark. Your absence sitting heavy on my chest, like I forgot to breathe without you. Each breath feeling like a hollow spoon scraping an empty bowl.
+
+I lived on memories that were never enough to keep me full.
+
+But look at us now. Distance dissolved into inches. My ribs no longer echo with your silence, finally they are filled by the weight of your presence. I don't have to dream with an open mouth anymore, or bite my lips to remember how it feels like to be full.
+
+Finally, I get to make the memories I used to crave. I promise you that i'll never stop showing up for you. Not because I feel pressured, not because I need to prove anything, and not because I am expected to. But because I want to and I love to. Because, choosing you feels like second nature to me, something my heart does without thinking... because the love I have for you isn't something I question.
+
+Speaking of questions... I have one question for you.
+-
+Love,
+OJ
+    </div>
+    <button id="next-stage-btn">Continue to Question</button>
+
+    <div id="proposal-stage">
+        <div class="gif-container">
+            <img src="me rose.png" alt="Custom Valentine Cartoon">
+        </div>
+        <h1>WILL YOU BE MY VALENTINE? ❤️</h1>
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+
+    <div id="success-content">
+        <div class="polaroid-frame">
+            <video autoplay loop muted playsinline>
+                <source src="I love you.mp4" type="video/mp4">
+            </video>
+            <div class="polaroid-caption">Forever And Always. ❤️</div>
+        </div>
+        <h1>Its not like you had a choice anyways 🙄</h1>
+        <p style="color: #666; font-style: italic;">(I LOVE YOU)</p>
+    </div>
+
+    <script>
+        const letterStage = document.getElementById('letter-stage');
+        const notePaper = document.getElementById('note-paper');
+        const nextStageBtn = document.getElementById('next-stage-btn');
+        const proposalStage = document.getElementById('proposal-stage');
+        const successContent = document.getElementById('success-content');
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const music = document.getElementById('bgMusic');
+
+        letterStage.addEventListener('click', () => {
+            music.play();
+            letterStage.style.transform = 'scale(0.8) rotateY(90deg)';
+            setTimeout(() => {
+                letterStage.style.display = 'none';
+                notePaper.style.display = 'block';
+                nextStageBtn.style.display = 'block';
+            }, 800); 
+        });
+
+        nextStageBtn.addEventListener('click', () => {
+            notePaper.style.display = 'none';
+            nextStageBtn.style.display = 'none';
+            proposalStage.style.display = 'flex';
+        });
+
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        yesBtn.addEventListener('click', () => {
+            proposalStage.style.display = 'none';
+            successContent.style.display = 'block';
+            document.body.style.backgroundColor = '#fff0f5'; 
+            startHearts();
+        });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's'; 
+            heart.style.opacity = Math.random();
+            heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+
+        function startHearts() {
+            setInterval(createHeart, 300);
+        }
+    </script>
+</body>
+</html>
